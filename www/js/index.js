@@ -12,6 +12,7 @@ var item_count = window.localStorage.length;
 		$("#launched").text("Application launched: " + launched_count);
 		$("#resumed").text("Application paused: " + paused_count);
 		$("#paused").text("Application resumed: " + resumed_count);
+		item_count = window.localStorage.length
 		$("#count").text("There are " + item_count + " items being stored on the device for this app!")
 	}
 
