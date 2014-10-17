@@ -1,6 +1,7 @@
 var paused_count = window.localStorage.getItem("paused");
 var resumed_count = window.localStorage.getItem("resumed");
 var launched_count = window.localStorage.getItem("launched");
+var item_count = window.localStorage.length;
 
     function onLoad() {
         document.addEventListener("deviceready", onDeviceReady, false);
@@ -11,6 +12,7 @@ var launched_count = window.localStorage.getItem("launched");
 		$("#launched").text("Application launched: " + launched_count);
 		$("#resumed").text("Application paused: " + paused_count);
 		$("#paused").text("Application resumed: " + resumed_count);
+		$("#count").text("There are " + item_count + " items being stored on the device for this app!")
 	}
 
 
