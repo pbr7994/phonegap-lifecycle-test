@@ -16,14 +16,14 @@ var flake = {
 	"Fibre": "0.7g"
 	};
 var flake_string = JSON.stringify(flake);
-var local_flake = window.localStorage.setItem("flake_string");
-var getFlake = window.localStorage.getItem("flake_string");
+var getFlake = window.localStorage.getItem("flake_info");
 var JSON_flake = JSON.parse(getFlake);
 
 
     function onLoad() {
         document.addEventListener("deviceready", onDeviceReady, false);
 		console.log("device ready");
+		window.localStorage.setItem("flake_info", flake_string);
 		
     }
 	
