@@ -1,6 +1,6 @@
-var paused_count =0;
-var resumed_count = 0;
-var launched_count = 0;
+var paused_count = window.localStorage.getItem("paused");
+var resumed_count = window.localStorage.getItem("resumed");
+var launched_count = window.localStorage.getItem("launched");
 
     function onLoad() {
         document.addEventListener("deviceready", onDeviceReady, false);
@@ -23,6 +23,7 @@ var launched_count = 0;
 		document.addEventListener("pause", onPause, false);
 		
 		launched_count++;
+		window.localStorage.setItem("launched", launched_count)
 		updateDisplay();
     }
 
@@ -31,11 +32,13 @@ var launched_count = 0;
     function onPause() {
 		alert("pause");
 		paused_count++;
+		window.localStorage.setItem("paused", paused_count)
 		updateDisplay();
     }
 	
 	function onResume() {
 		alert("resume");
 		resumed_count++;
+		window.localStorage.setItem("resumed", resumed_count)
 		updateDisplay();
     }
