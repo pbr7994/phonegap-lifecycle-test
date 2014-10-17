@@ -14,11 +14,11 @@ var flake = {
 		"UnSaturated": "11.5g"
 		},
 	"Fibre": "0.7g"
-	}
+	};
 var flake_string = JSON.stringify(flake);
-var local_flake = window.localStorage.setItem("flake_string")
-var getFlake = window.localStorage.getItem("flake_string")
-var JSON_flake = JSON.parse(getFlake)
+var local_flake = window.localStorage.setItem("flake_string");
+var getFlake = window.localStorage.getItem("flake_string");
+var JSON_flake = JSON.parse(getFlake);
 
 
     function onLoad() {
