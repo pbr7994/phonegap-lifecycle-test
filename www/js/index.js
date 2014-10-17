@@ -32,7 +32,7 @@ var JSON_flake = JSON.parse(getFlake);
 		$("#paused").text("Application resumed: " + resumed_count);
 		item_count = window.localStorage.length;
 		$("#count").text("There are " + item_count + " items being stored on the device for this app!");
-		$("#flake").text(flake_string + <p> + "Energy " + JSON_flake.Energy.KJ + " / " + JSON_flake.Energy.Kcal);
+		$("#flake").text(flake_string + "\nEnergy " + JSON_flake.Energy.KJ + " / " + JSON_flake.Energy.Kcal);
 	}
 
 
