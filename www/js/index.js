@@ -21,7 +21,6 @@ var launched_count = window.localStorage.getItem("launched");
         
 		document.addEventListener("resume", onResume, false);
 		document.addEventListener("pause", onPause, false);
-		
 		launched_count++;
 		window.localStorage.setItem("launched", launched_count)
 		updateDisplay();
@@ -30,14 +29,12 @@ var launched_count = window.localStorage.getItem("launched");
     // Handle the pause event
     //
     function onPause() {
-		alert("pause");
 		paused_count++;
 		window.localStorage.setItem("paused", paused_count)
 		updateDisplay();
     }
 	
 	function onResume() {
-		alert("resume");
 		resumed_count++;
 		window.localStorage.setItem("resumed", resumed_count)
 		updateDisplay();
